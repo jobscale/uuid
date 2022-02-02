@@ -9,6 +9,6 @@ class UUID {
   }
 }
 
-module.exports = new UUID();
+module.exports = UUID.v4;
 module.exports.uuid = UUID.v4;
 module.exports.v4 = UUID.v4;
