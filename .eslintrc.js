@@ -8,8 +8,11 @@ module.exports = {
     'arrow-parens': 'off',
     'class-methods-use-this': 'off',
     'no-await-in-loop': 'off',
+    'no-bitwise': 'off',
   },
   env: {
+    node: true,
+    browser: true,
     'jest/globals': true,
   },
   plugins: [
