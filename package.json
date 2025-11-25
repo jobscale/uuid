@@ -1,6 +1,6 @@
 {
   "name": "@jobscale/uuid",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "@jobscale/uuid",
   "keywords": [
     "uuid",
@@ -15,16 +15,15 @@
   "scripts": {
     "lint": "eslint",
     "pretest": "npm run lint",
-    "test": "jest --runInBand --coverage --collectCoverage"
+    "test": "date -Iseconds && node --experimental-vm-modules node_modules/.bin/jest --detectOpenHandles --runInBand --coverage --collectCoverage"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
+  "pre-commit": "test",
   "author": "jobscale <jobscale@users.noreply.github.com>",
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@jobscale/eslint-plugin-standard": "^0.0.3",
     "eslint": "^9.39.1",
+    "eslint-plugin-jest": "^29.2.1",
     "globals": "^16.5.0",
     "jest": "^30.2.0",
     "pre-commit": "^1.2.2"

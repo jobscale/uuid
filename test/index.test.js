@@ -1,4 +1,4 @@
-const v4uuid = require('..');
+import v4uuid from '../index.js';
 
 const { UUID, uuid, v4 } = v4uuid;
 
@@ -15,25 +15,25 @@ describe('test uuid', () => {
         const { uuid: uuidGen } = new UUID();
         const unit = [uuidGen(), uuidGen(), uuidGen(), uuidGen(), uuidGen()];
         list.push(unit);
-        expect(unit.length).toBe(5);
+        expect(unit).toHaveLength(5);
       });
 
       it('test v4uuid', () => {
         const unit = [v4uuid(), v4uuid(), v4uuid(), v4uuid(), v4uuid()];
         list.push(unit);
-        expect(unit.length).toBe(5);
+        expect(unit).toHaveLength(5);
       });
 
       it('test uuid', () => {
         const unit = [uuid(), uuid(), uuid(), uuid(), uuid()];
         list.push(unit);
-        expect(unit.length).toBe(5);
+        expect(unit).toHaveLength(5);
       });
 
       it('test v4', () => {
         const unit = [v4(), v4(), v4(), v4(), v4()];
         list.push(unit);
-        expect(unit.length).toBe(5);
+        expect(unit).toHaveLength(5);
       });
     });
   }
@@ -43,7 +43,7 @@ describe('test uuid', () => {
       logger.info(...list);
       const uniqueSet = new Set();
       list.flat().forEach(uid => uniqueSet.add(uid));
-      expect(Array.from(uniqueSet).length).toBe(count * 20);
+      expect(Array.from(uniqueSet)).toHaveLength(count * 20);
     });
   });
 });
