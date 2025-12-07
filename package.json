@@ -1,6 +1,6 @@
 {
   "name": "@jobscale/uuid",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "@jobscale/uuid",
   "keywords": [
     "uuid",
@@ -21,7 +21,7 @@
   "author": "jobscale <jobscale@users.noreply.github.com>",
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@jobscale/eslint-plugin-standard": "^0.0.8",
+    "@jobscale/eslint-plugin-standard": "^0.0.11",
     "eslint": "^9.39.1",
     "eslint-plugin-jest": "^29.2.1",
     "globals": "^16.5.0",
