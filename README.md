@@ -8,11 +8,26 @@ npm i @jobscale/uuid
 
 ## Examples
 
-```javascript
-import { Logger } from '@jobscale/logger';
-import { uuid } from '@jobscale/uuid';
-// const { uuid } = await import('@jobscale/uuid); // CommonJs
+ES Module
 
-const logger = new Logger({ logLevel: 'info' });
+```javascript
+import { createLogger } from '@jobscale/create-logger';
+import { uuid } from '@jobscale/uuid';
+
+const logger = createLogger({ level: 'info' });
 logger.info({ uuid: uuid() });
+```
+
+CommonJs
+
+```javascript
+const main = async () => {
+  const { createLogger } = await import('@jobscale/create-logger');
+  const { uuid } = await import('@jobscale/uuid');
+
+  const logger = createLogger({ level: 'info' });
+  logger.info({ uuid: uuid() });
+};
+
+main();
 ```
